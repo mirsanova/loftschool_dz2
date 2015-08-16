@@ -1,0 +1,13 @@
+.foot-menu
+    -var items = ['О магазине', 'Каталог', 'Контакты']
+    -var items_info = ['О нас', 'Наши цены', 'Наши скидки', 'Акции', 'Смартфоны', 'Планшеты', 'Компьютеры', 'Аксессуары', 'Телефоны','Адреса', 'Карта проезда', 'Обратная связь']
+    -var i = 1
+    -var k = 0
+     each item in items
+        ul.foot-menu__list
+            li(class="foot-menu__item_title")= item
+            - for (var j=0; k < i * 4; j++, k++) {
+                li.foot-menu__item
+                    a.foot-menu__link(href="#")= items_info[k]
+            - }
+            -i = i + 1

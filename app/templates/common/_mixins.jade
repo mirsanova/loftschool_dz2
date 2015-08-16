@@ -1,0 +1,23 @@
+mixin content(img, title, desc)
+    article.desc__item
+        a(href="#").desc__link
+            img.desc__img(src="img/item-" + img + ".jpg", alt=""+title)
+            h1.desc__title= title
+            .desc__info
+
+                .desc__left
+                    -var keys = ['Артикул','Опция','Цвет','Размер','Вес']
+                    each key in keys
+                        span.desc__text= key
+
+                .desc__right
+                    each option in desc
+                        span.desc__text= option
+
+mixin breadcrumbs(items, activeIndex)
+    .breadcrumbs
+        ul.breadcrumbs__list
+            each item, ndx in items
+                li(class="breadcrumbs__item" + ((ndx == activeIndex) ? ' breadcrumbs__item_active' : ''))
+                    a(href="#" class="breadcrumbs__link")= item
+
