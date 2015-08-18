@@ -57,3 +57,17 @@
         }
     }
 }
+
+.second-nav__full {
+    width: 100%;
+    @include clearfix;
+    padding-bottom: 10px;
+}
+
+.second-nav__full .viewer-switcher {
+    float: left;
+}
+
+.second-nav__full .pagination {
+    float: right;
+}

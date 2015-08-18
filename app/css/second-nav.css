@@ -54,3 +54,19 @@
     .pagination__link_active {
       text-decoration: none;
       color: #5c7b98; }
+
+.second-nav__full {
+  width: 100%;
+  padding-bottom: 10px; }
+  .second-nav__full:before,
+  .second-nav__full:after {
+    content: "";
+    display: table; }
+  .second-nav__full:after {
+    clear: both; }
+
+.second-nav__full .viewer-switcher {
+  float: left; }
+
+.second-nav__full .pagination {
+  float: right; }
