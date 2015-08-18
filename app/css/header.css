@@ -1,0 +1,39 @@
+/* --------- mixins --------- */
+/* --------- flexbox --------- */
+.header {
+  padding-bottom: 55px;
+  background: #d9e4f0;
+  background: linear-gradient(90deg, #dae4ef 0%, #f0f5f9 50%, #f0f5f9 50%, #dae4ef 100%);
+  margin-bottom: 40px; }
+  .header:before,
+  .header:after {
+    content: "";
+    display: table; }
+  .header:after {
+    clear: both; }
+
+.main-logo {
+  float: left;
+  margin-top: 20px; }
+  .main-logo__img {
+    min-width: 199px;
+    min-height: 57px; }
+
+.contacts {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 20px;
+  float: right; }
+  .contacts__number {
+    font: 25px "elektra_light_proregular"; }
+    .contacts__number_style {
+      color: #00b9fe;
+      font: 15px "elektra_light_probold";
+      vertical-align: top;
+      margin-right: 5px; }
+  .contacts__mail {
+    text-align: center; }
+  .contacts__link {
+    color: #613993;
+    font: 18px "elektra_light_proregular";
+    text-align: center; }

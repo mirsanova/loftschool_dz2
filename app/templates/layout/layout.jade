@@ -10,9 +10,10 @@ html(lang='ru-RU')
                     include ../common/navigation.jade
                     .second-nav
                         block breadcrumbs
-                        include ../common/viewer_switcher.jade
-                        include ../common/pagination.jade
+                        .second-nav__right
+                            include ../common/viewer_switcher.jade
+                            include ../common/pagination.jade
                     include ../common/sidebar.jade
                     block content
-                include ../common/footer.jade
+        include ../common/footer.jade
         script(src="/bower/jquery/jquery.js")

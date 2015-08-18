@@ -1,0 +1,115 @@
+@import "common-style";
+@import "mixins";
+.content{
+    float: right;
+    width: 720px;
+}
+.desc__box{
+    width:100%;
+}
+.desc{
+    &__item{
+        border: 1px solid #dce2ec;
+        padding: 30px;
+        margin-bottom: 20px;
+        // box-sizing: border-box;
+    }
+    &__img-box{
+        width: 25%;
+        display: inline-block;
+        margin-right: 30px;
+    }
+    &__img{
+        width:100%;
+        height: auto;
+    }
+    &__title{
+        color: $blue;
+        text-decoration: underline;
+        font-weight: normal;
+        font-size: 16px;
+        margin-bottom: 15px;
+        margin-top: 0px;
+    }
+    &__info{
+        display: inline-block;
+        vertical-align: top;
+        width:60%;
+
+
+    }
+    &__link{
+        width:100%;
+        height:100%;
+
+    }
+    &__text{
+
+        display: underline;
+        &:first-child:after{
+            content:':';
+            font-size: 14px;
+        }
+        &:last-child{
+            padding-left: 5px;
+        }
+    }
+    &__option{
+        word-wrap:break-word;
+        width:100%;
+        left:0;
+        line-height: 20px;
+
+
+    }
+    &__option-box{
+        padding-right: 4px;
+    }
+    &__option-box:not(:last-child):after{
+        content:',';
+        font-size: 14px;
+    }
+}
+.btn-up{
+    color: #fff;
+    font-size: 15px;
+    padding-top: 10px;
+    font-family: $font-el-l-b;
+    background: $blue;
+    width: 76px;
+    height: 28px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    margin-left: 502px;
+    cursor: pointer;
+    &:before {
+       content: '';
+        width: 0;
+        height: 0;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent;
+        border-bottom-color: $blue;
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        margin-left: -5px;
+    }
+    &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent;
+        border-bottom-color: #fff;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -5px;
+    }
+}
+
+
+

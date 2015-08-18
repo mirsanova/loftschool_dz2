@@ -1,0 +1,94 @@
+/* --------- adjustment --------- */
+@import "common-style";
+@import "mixins.scss";
+$container-width    : 1000px;
+$footer-height      : 240px;
+
+html {
+	width:100%;
+	height:100%;
+	font-size: 100.01%;
+}
+
+body {
+	color: $grey;
+    -webkit-font-smoothing: antialiased;
+	width:100%;
+	height:100%;
+    font: 14px $font-el-l-r;
+}
+
+.container {
+    @include clearfix;
+    width: $container-width;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    min-height: 100%;
+
+}
+.content{
+    padding-bottom: 80px;
+}
+.main-content{
+
+    height:auto;
+    box-sizing: border-box;
+    margin-bottom: $footer-height;
+
+}
+.wrapper {
+    position: relative;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    overflow: hidden;
+    min-width: $container-width + 20;
+
+
+    &:after {
+	    display: block;
+        position: relative;
+    }
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+	list-style: none outside none;
+
+	li {
+        padding: 0;
+        left: 0;
+    }
+}
+
+p {
+    padding: 0;
+    margin: 0;
+    font: 15px $font-el-l-r;
+    line-height: 20px;
+    margin-bottom: 10px;
+
+}
+
+footer {
+	position: relative;
+	height: $footer-height;
+    margin-top: -$footer-height;
+}
+a {
+    cursor: pointer;
+    color: $grey;
+}
+h2{
+    font-family: $font-el-l-b;
+    font-size: 26px;
+    margin-bottom: 10px;
+    line-height: 28px;
+}

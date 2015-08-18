@@ -1,0 +1,98 @@
+@import "common-style";
+@import "mixins";
+.main-nav{
+    position:absolute;
+    top: -62px;
+    background: transparent;
+    border: 0px;
+    overflow: hidden;
+    width: 100%;
+    &:first-child{
+        padding-left: 20px;
+    }
+    &__item{
+        display: inline-block;
+        background-color: #f7f7f7;
+        position: relative;
+        margin-left: -4px;
+        color: #f7f7f7;
+        &:hover{
+            background: #dce6f0;
+            color: #dce6f0;
+        }
+        &:hover:after{
+            border-left-color: #dce6f0;
+        }
+        &:before,
+        &:after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            margin-top: -1.5em;
+            border-top: 1.5em solid transparent;
+            border-bottom: 1.5em solid transparent;
+            border-left: 1em solid;
+        }
+        &:after{
+            right: -0.9em;
+            z-index: 2;
+            border-left-color:  #f7f7f7;
+        }
+        &:before{
+            border-left-color: #f7f7f7;
+            border-left: 1em solid;
+             right: -1em;
+             z-index: 1;
+             color:  #e3e3e3;
+        }
+        }
+    &__link{
+        display:block;
+        text-decoration: none;
+        color: $grey;
+        font-size: 15px;
+        text-shadow: 0 1px 0 rgba(255,255,255,.5);
+        padding: 12px;
+        padding-left: 25px;
+        &_first{
+            padding-left:15px;
+        }
+    }
+    &__span{
+        position: absolute;
+        top: 50%;
+        margin-top: -1.5em;
+        z-index: 1;
+        left: -0.9em;
+        border-right: 0em solid;
+        border-top: 1.55em solid;
+        border-left: 1em solid transparent;
+        border-bottom: 1.55em solid;
+        &:after{
+            content: "";
+            position: absolute;
+            width:20px;
+            height: 20px;
+            z-index: 3;
+            left: -1em;
+            border-bottom: 1px solid  #e3e3e3;
+        }
+    }
+}
+.nav__link_active{
+    background: $blue;
+    color:$white;
+    &:before{
+       content: "";
+        position: absolute;
+        top: 50%;
+        margin-top: -1.5em;
+        border-top: 1.5em solid transparent;
+        border-bottom: 1.5em solid transparent;
+        border-left: 1em solid;
+        right: -0.9em;
+        border-left-color: $blue;
+        z-index: 4;
+    }
+}
+

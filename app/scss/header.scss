@@ -1,0 +1,47 @@
+@import "common-style";
+@import "mixins";
+
+.header{
+@include clearfix;
+padding-bottom: 55px;
+background: #d9e4f0;
+background: linear-gradient(90deg, #dae4ef 0%, #f0f5f9 50%, #f0f5f9 50%, #dae4ef 100%);
+margin-bottom: 40px;
+}
+
+.main-logo{
+float: left;
+margin-top: 20px;
+
+
+&__img{
+min-width: 199px;
+min-height: 57px;
+}
+}
+.contacts{
+@include inlineblock;
+margin-top: 20px;
+float: right;
+
+&__number {
+font: 25px $font-el-l-r;
+
+&_style {
+color: $blue;
+font: 15px $font-el-l-b;
+vertical-align: top;
+margin-right: 5px;
+}
+}
+
+&__mail{
+    text-align: center;
+}
+
+&__link{
+    color: $purple;
+    font: 18px $font-el-l-r;
+    text-align: center;
+}
+}

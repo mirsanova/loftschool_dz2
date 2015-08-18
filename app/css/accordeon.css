@@ -1,0 +1,51 @@
+/* --------- mixins --------- */
+/* --------- flexbox --------- */
+.sidebar {
+  width: 230px; }
+
+.accordeon {
+  float: left;
+  width: 100%;
+  background-color: #ffffff; }
+  .accordeon__inner {
+    display: none; }
+  .accordeon__list {
+    width: 100%; }
+  .accordeon__item {
+    border-bottom: 1px solid #e3e3e3; }
+    .accordeon__item:last-child {
+      border-bottom: none; }
+  .accordeon__trigger,
+  .accordeon__inner__link {
+    text-decoration: none;
+    padding: 10px 0 10px 20px;
+    display: block;
+    font-size: 15px; }
+  .accordeon__inner__link {
+    padding: 10px 0 10px 30px;
+    position: relative; }
+    .accordeon__inner__link:before {
+      position: absolute;
+      content: '';
+      width: 3px;
+      height: 3px;
+      border: 2px solid #5c7b98;
+      left: 15px;
+      top: 15px;
+      border-left-color: transparent;
+      border-bottom-color: transparent;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg); }
+  .accordeon__inner__item {
+    border-top: 1px solid #e3e3e3; }
+  .accordeon__trigger:hover,
+  .accordeon__inner__link:hover {
+    background-color: #dce6f0; }
+  .accordeon__trigger_active {
+    background: #00b9fe;
+    color: #ffffff;
+    font-size: 15px; }
+    .accordeon__trigger_active:hover {
+      background: #00b9fe;
+      color: #ffffff; }

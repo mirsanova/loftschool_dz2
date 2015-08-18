@@ -1,18 +1,23 @@
 mixin content(img, title, desc)
     article.desc__item
         a(href="#").desc__link
-            img.desc__img(src="img/item-" + img + ".jpg", alt=""+title)
-            h1.desc__title= title
+            .desc__img-box
+                img.desc__img(src="img/item-" + img + ".jpg", alt=""+title)
+
             .desc__info
-
-                .desc__left
-                    -var keys = ['Артикул','Опция','Цвет','Размер','Вес']
+                h1.desc__title= title
+                -var keys = ['Артикул','Опция','Цвет','Размер','Вес']
+                -var i = 1
+                -var k = 0
+                .desc__option
                     each key in keys
-                        span.desc__text= key
+                        span.desc__option-box
+                            span.desc__text= key
+                            - for (var j=0; k < i * 1; j++, k++) {
+                                span.desc__text= desc[k]
+                            - }
+                            -i = i + 1
 
-                .desc__right
-                    each option in desc
-                        span.desc__text= option
 
 mixin breadcrumbs(items, activeIndex)
     .breadcrumbs

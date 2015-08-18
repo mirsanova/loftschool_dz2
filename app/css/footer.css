@@ -1,0 +1,61 @@
+/* --------- mixins --------- */
+/* --------- flexbox --------- */
+.footer {
+  background: #613993 url("../img/foot-bg.jpg") repeat;
+  padding-top: 65px;
+  line-height: 20px;
+  box-sizing: border-box; }
+  .footer:before,
+  .footer:after {
+    content: "";
+    display: table; }
+  .footer:after {
+    clear: both; }
+
+.logo {
+  margin-right: 120px;
+  display: inline-block;
+  vertical-align: middle; }
+
+.foot-menu {
+  display: inline-block;
+  color: #fff; }
+  .foot-menu__list {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 65px; }
+  .foot-menu____link {
+    text-decoration: none;
+    color: inherit;
+    text-decoration: underline; }
+  .foot-menu__item_title {
+    font-family: "elektra_light_probold"; }
+
+.mobile-app__link {
+  margin-right: 7px;
+  margin-bottom: 20px; }
+
+.socials__link, .mobile-app__link {
+  display: inline;
+  vertical-align: top; }
+
+.mobile-app__item, .socials__item {
+  display: inline-block; }
+
+.socials__link {
+  font-size: 0;
+  margin-right: 10px; }
+
+.mobile-app__link {
+  font-size: 0; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+.socials-box {
+  float: right;
+  margin-top: 8px; }
+
+.mobile-app {
+  margin-bottom: 20px; }

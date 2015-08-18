@@ -3,17 +3,23 @@ footer.footer
         .logo
             img.logo__img(src="img/logo.png", alt="logo")
         include footer-menu.jade
-        .mobile-app
-            ul.mobile-app__list
-                li.mobile-app__item
-                     a.mobile-app__link.mobile-app__link_appstore(href="#") App store
-                li.mobile-app__item
-                     a.mobile-app__link.mobile-app__link_gplay(href="#") Google play
-        .socials
-            ul.socials__list
-                li.socials__item
-                    a.socials__link.socials__link_vk(href="#") Вконтакте
-                li.socials__item
-                    a.socials__link.socials__link_vk(href="#") FaceBook
-                li.socials__item
-                    a.socials__link.socials__link_vk(href="#") Twitter
+        .socials-box
+            .mobile-app
+                ul.mobile-app__list
+                    li.mobile-app__item
+                         a.mobile-app__link.mobile-app__link_appstore(href="#") App store
+                            img.mobile-app__img(src="img/icon-appstore.png")
+                    li.mobile-app__item
+                         a.mobile-app__link.mobile-app__link_gplay(href="#") Google play
+                            img.mobile-app__img(src="img/icon-gplay.png")
+            .socials
+                ul.socials__list
+                    li.socials__item
+                        a.socials__link.socials__link_vk(href="#") Вконтакте
+                            img.mobile-app__img(src="img/icon-vk.png")
+                    li.socials__item
+                        a.socials__link.socials__link_fb(href="#") FaceBook
+                            img.mobile-app__img(src="img/icon-fb.png")
+                    li.socials__item
+                        a.socials__link.socials__link_tw(href="#") Twitter
+                            img.mobile-app__img(src="img/icon-tw.png")

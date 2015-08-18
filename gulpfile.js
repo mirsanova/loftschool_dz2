@@ -1,7 +1,9 @@
 var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     plumber = require('gulp-plumber'),
-    jade = require('gulp-jade');
+    jade = require('gulp-jade'),
+    sass = require('gulp-sass');
+
     // spritesmith = require('gulp.spritesmith');
 
 gulp.task('server', function () {
@@ -23,8 +25,21 @@ gulp.task('jade', function() {
     .pipe(plumber.stop());
 });
 
+gulp.task('scss', function() {
+  gulp.src('app/scss/*.scss')
+    .pipe(sass({
+      noCache: true,
+      style: "expanded",
+      lineNumbers: true,
+      errLogToConsole: true
+    }))
+    .on('error', console.log)
+    .pipe(gulp.dest('app/css/'));
+});
+
 gulp.task('watch', function () {
   gulp.watch(['app/templates/pages/*.jade'], ['jade']);
+  gulp.watch('app/scss/*.scss', ['scss']);
   gulp.watch([
     'app/*.html',
     'app/js/**/*.js',
@@ -44,4 +59,4 @@ gulp.task('watch', function () {
 //     spriteData.css.pipe(gulp.dest('app/css/')); // путь, куда сохраняем стили
 // });
 
-gulp.task('default', ['server', 'watch']);
+gulp.task('default', ['server', 'watch', 'jade', 'scss']);
