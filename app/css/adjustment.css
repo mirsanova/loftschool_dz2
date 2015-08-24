@@ -31,8 +31,7 @@ body {
 
 .main-content {
   height: auto;
-  box-sizing: border-box;
-  margin-bottom: 240px; }
+  box-sizing: border-box; }
 
 .wrapper {
   position: relative;
@@ -42,8 +41,10 @@ body {
   overflow: hidden;
   min-width: 1020px; }
   .wrapper:after {
+    content: '';
     display: block;
-    position: relative; }
+    position: relative;
+    height: 240px; }
 
 table {
   border-collapse: collapse;

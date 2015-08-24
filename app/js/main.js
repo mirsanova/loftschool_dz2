@@ -18,9 +18,26 @@
           $(".second-nav__right").appendTo(".second-nav");
           $(".second-nav__right").toggleClass("second-nav__full");
       }
-      document.getElementById("viewer-switcher__inner").focus();
+
 
     });
+      $(window).scroll(function(){
+        var vpTop = $(this).scrollTop();
+        if ( $(document).scrollTop() > 0 ) {
+          btnUp.fadeIn('fast');
+          if ( vpTop < 900) {
+            btnUp.css({
+              position: 'fixed'
+            });
+          } else {
+            btnUp.css({
+              position: 'absolute'
+            });
+          }
+        } else {
+          btnUp.fadeOut('fast');
+       }
+      });
 
     btnUp.on("click", function (event) {
       event.preventDefault();
@@ -31,8 +48,9 @@
 
     accordeon.on("click", function (event) {
         event.preventDefault();
+        var accordeon = $(this);
         $(".accordeon__item").find(".accordeon__trigger").removeClass("accordeon__trigger_active");
-        $(this).find(".accordeon__trigger").toggleClass("accordeon__trigger_active");
-        $(this).find("#accordeon__inner").toggleClass("accordeon__inner");
+        accordeon.find(".accordeon__trigger").toggleClass("accordeon__trigger_active");
+        accordeon.find("#accordeon__inner").toggleClass("accordeon__inner");
     });
   });

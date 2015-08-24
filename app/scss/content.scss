@@ -18,9 +18,11 @@
         width: 25%;
         display: inline-block;
         margin-right: 30px;
+        text-align: center;
     }
     &__img{
-        width:100%;
+        max-width:95%;
+        max-height:95%;
         height: auto;
     }
     &__title{
@@ -41,6 +43,7 @@
     &__link{
         width:100%;
         height:100%;
+        display: block;
 
     }
     &__text{
@@ -80,9 +83,11 @@
     height: 28px;
     text-align: center;
     position: absolute;
+    top: 90%;
     left: 50%;
     margin-left: 502px;
     cursor: pointer;
+    z-index: 100;
     &:before {
        content: '';
         width: 0;

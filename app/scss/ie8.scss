@@ -1,0 +1,35 @@
+.main-nav{
+    width: 1000px;
+    &__link{
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+.viewer-switcher__inner{
+    background: none;
+    padding: 2px;
+    padding-right:5px;
+}
+.accordeon__inner__link:before{
+   content:'>';
+   font-size: 12px;
+   border: none;
+}
+.desc__box{
+    width: 740px;
+}
+.desc-grid .desc__item{
+    width: 180px;
+}
+.desc-grid .desc__img-box{
+    width: 150px;
+}
+.desc__option{
+    width: 380px;
+}
+.desc-grid .desc__option{
+    width: 100%;
+}
+.desc-grid .desc__img{
+    width: 180px;
+}

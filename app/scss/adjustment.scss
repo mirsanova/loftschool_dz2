@@ -31,10 +31,8 @@ body {
     padding-bottom: 80px;
 }
 .main-content{
-
     height:auto;
     box-sizing: border-box;
-    margin-bottom: $footer-height;
 
 }
 .wrapper {
@@ -47,8 +45,10 @@ body {
 
 
     &:after {
+        content:'';
 	    display: block;
         position: relative;
+        height: $footer-height
     }
 }
 

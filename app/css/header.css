@@ -1,5 +1,8 @@
 /* --------- mixins --------- */
 /* --------- flexbox --------- */
+html {
+  overflow: auto; }
+
 .header {
   padding-bottom: 55px;
   background: #d9e4f0;
@@ -14,7 +17,8 @@
 
 .main-logo {
   float: left;
-  margin-top: 20px; }
+  margin-top: 20px;
+  display: block; }
   .main-logo__img {
     min-width: 199px;
     min-height: 57px; }
